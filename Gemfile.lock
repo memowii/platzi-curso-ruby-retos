@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  -darwin-21
+
+DEPENDENCIES
+
+RUBY VERSION
+   ruby 2.5.6p201
+
+BUNDLED WITH
+   2.3.14

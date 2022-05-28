@@ -13,7 +13,15 @@
 # Por ejemplo, [,{,*, etc deben permanecer igual.
 
 def encode(text)
-  #TODO: Implementa este metodo
+  text.split('').map do |char|
+    if ('A'..'Z').include?(char) || ('a'..'z').include?(char)
+      next 'A' if char == 'Z'
+      next 'a' if char == 'z'
+      next (char.ord + 1).chr
+    end
+
+    char
+  end.join
 end
 
 if encode("abcdXyZAB") == "bcdeYzABC"

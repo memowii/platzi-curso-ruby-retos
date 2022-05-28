@@ -3,7 +3,8 @@
 # siguiente caracter.
 
 def encode(text)
-  #TODO: Implementa este metodo
+  text.split('')
+      .map { |char| (char.ord + 1).chr }.join
 end
 
 if encode("abcd$@") == "bcde%A"
@@ -11,4 +12,3 @@ if encode("abcd$@") == "bcde%A"
 else
   raise "INCORRECT"
 end
-
