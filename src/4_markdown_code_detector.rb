@@ -11,8 +11,10 @@
 # incluir "```(ruby)" ni "```"
 
 
-def markdown_ruby_code_detector(file)
-  #TODO:
+def markdown_ruby_code_detector(file_path)
+  content = File.new(file_path).read
+  regex = /```\(ruby\)$.*?```$/m
+  content.scan(regex).map { |block| block.split("\n")[1...-1].join("\n") }
 end
 
 
